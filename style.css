@@ -1,0 +1,33 @@
+/*https://stackoverflow.com/questions/73679219/how-to-embed-a-video-background-on-a-website-fast-loop-autoplay*/
+.bg-video {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background: no-repeat center;
+  margin-left: 50vw;
+  user-select: none;
+  pointer-events: none;
+
+  /*custom styles, for example grayscale appearance*/
+  filter: grayscale(0.8);
+
+  /*additional tweaks for positioning, read more in the link above*/
+  height: 100%;
+  width: 177.77777778vh; /* 100 * 16 / 9 */
+  min-width: 100%;
+  min-height: 56.25vw; /* 100 * 9 / 16 */
+}
+
+#bg-video {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+/*  mask-image: linear-gradient(to top, transparent 0%, black 50%, transparent 100%);*/
+  user-select: none;
+  pointer-events: none;
+/*  filter: grayscale(0.8);*/
+  aspect-ratio: 16/9;
+}
